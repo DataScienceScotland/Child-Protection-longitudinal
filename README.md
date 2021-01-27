@@ -1,1 +1,6 @@
 # Child-Protection-longitudinal
+#This code assembles data collected annually by SG from local authorities on child protection case conferences, registrations on the child protection register, investigations and transfers into longitudinal format.
+
+Data are read in from SG servers in CSV format into R. Four file types (child, investigation, case conference and transfer) and then collated with data from all available years (2012-13 to 2018-19). Child, investigation and conference file types are then combined to form the longitudinal dataset. The transfer files are added to this to check that all children who were deregistered from one local authority due to a transfer were received by another in the data. 
+
+Several logic checks are also performed to investigate compliance with data recording practices, as well as checking compliance with official guidance on child protection. For example a check is performed on whether there is an investigation performed before each case conference, and a check on the accuracy of the 'PreviouslyRegistered' variable (the date of the case conference in which a child was registered can be compared to the date of the PreviouslyRegistered variable). Several charts are produced to display the results of the checks. 
